@@ -1,0 +1,27 @@
+
+{{!-- a navigation item to appear on the left hand side of the GUI
+	 parameters are : 
+	 target : the target page this navigation item should open
+	 icon 	: the icon that should be displayed along side the title
+	 title 	: the title of the menu item
+	 subitems : a list JSON objects which exist as child entries in the menu item (i.e. treeview)
+	 TODO : need a helper class for subitems but probably we should use a fully fledged JSON schema at the point of getting the page
+	 
+--}}
+ 
+<li><a {{#if subitems}}
+		href="javascript:;" 
+		{{else}}
+		 href='/{{target}}'
+		{{/if}}
+		
+	>
+	<i class="cvt-nav-button fa fa-{{icon}}"></i> <span>{{title}}</span>{{#if badge}}<span class="badge badge-danger">{{badge}}</span>{{/if}}</a>
+	{{#if subitems}}
+	 <ul class="acc-menu">
+     {{#each subitems}} 
+     	<li><a target="{{this.target}}">{{this.title}}</a></li>
+     {{/each}}
+     </ul> 
+     {{/if}}  
+</li>      

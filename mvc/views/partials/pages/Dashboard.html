@@ -1,0 +1,737 @@
+<div id="page-content" style="min-height: 2438px;">
+    <div id="wrap">
+        <div id="page-heading">
+            <ol class="breadcrumb">
+                <li class="active"><a href="index.htm">Dashboard</a></li>
+            </ol>
+
+            <h1>Dashboard</h1>
+            <div class="options">
+                <div class="btn-toolbar">
+                    <button class="btn btn-default" id="daterangepicker2">
+                        <i class="fa fa-calendar-o"></i> 
+                        <span class="hidden-xs hidden-sm">December 9, 2013 - January 8, 2014</span> <b class="caret"></b>
+                    </button>
+                    <div class="btn-group hidden-xs">
+                        <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cloud-download"></i><span class="hidden-xs hidden-sm hidden-md"> Export as</span> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Text File (*.txt)</a></li>
+                            <li><a href="#">Excel File (*.xlsx)</a></li>
+                            <li><a href="#">PDF File (*.pdf)</a></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn btn-default hidden-xs"><i class="fa fa-cog"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-12 col-sm-6">
+                            {{loadView "dashboard-summary-widget" title="Total Calls" color="toyo" caption="16" summary="calls currently queuing" footer="view call queues"}}
+                        </div>
+                        <div class="col-md-3 col-xs-12 col-sm-6">
+                            {{loadView "dashboard-summary-widget" title="Available" color="success" caption="2" summary="available to take calls" footer="view agents"}}                          
+                        </div>
+                        <div class="col-md-3 col-xs-12 col-sm-6">
+                         {{loadView "dashboard-summary-widget" title="Not Ready" color="orange" caption="16" summary="not able to take calls" footer="view agents"}}                                                  
+                        </div>
+                        <div class="col-md-3 col-xs-12 col-sm-6">
+                            {{loadView "dashboard-summary-widget" title="Calls In Progress" color="alizarin" caption="2" summary="currently being handled" footer="view calls"}}                                                  
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-info">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12 clearfix">
+                                    <h4 class="pull-left" style="margin: 0 0 20px;">User Report <small>(weekly)</small></h4>
+                                    <div class="btn-group pull-right">
+                                        <a href="javascript:;" class="btn btn-default btn-sm active">this week</a>
+                                        <a href="javascript:;" class="btn btn-default btn-sm ">previous week</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div id="site-statistics" style="height: 250px; padding: 0px; position: relative;"><canvas class="flot-base" width="395" height="250" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 395px; height: 250px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div style="position: absolute; max-width: 109px; top: 238px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 25px; text-align: center;">S</div><div style="position: absolute; max-width: 109px; top: 238px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 384px; text-align: center;">S</div><div style="position: absolute; max-width: 109px; top: 238px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 83px; text-align: center;">M</div><div style="position: absolute; max-width: 109px; top: 238px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 145px; text-align: center;">T</div><div style="position: absolute; max-width: 109px; top: 238px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 264px; text-align: center;">T</div><div style="position: absolute; max-width: 109px; top: 238px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 203px; text-align: center;">W</div><div style="position: absolute; max-width: 109px; top: 238px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 324px; text-align: center;">F</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div style="position: absolute; top: 222px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 12px; text-align: right;">0</div><div style="position: absolute; top: 167px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 0px; text-align: right;">250</div><div style="position: absolute; top: 112px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 0px; text-align: right;">500</div><div style="position: absolute; top: 57px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 0px; text-align: right;">750</div><div style="position: absolute; top: 2px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 5px; text-align: right;">1K</div></div></div><canvas class="flot-overlay" width="395" height="250" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 395px; height: 250px;"></canvas><div class="legend"><div style="position: absolute; width: 84px; height: 51px; top: 13px; right: 13px; opacity: 0.85; background-color: rgb(255, 255, 255);"> </div><table style="position:absolute;top:13px;right:13px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid transparent;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(166,176,194);overflow:hidden"></div></div></td><td class="legendLabel">View Count</td></tr><tr><td class="legendColorBox"><div style="border:1px solid transparent;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(113,165,231);overflow:hidden"></div></div></td><td class="legendLabel">Unique Views</td></tr><tr><td class="legendColorBox"><div style="border:1px solid transparent;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(170,115,194);overflow:hidden"></div></div></td><td class="legendLabel">User Count</td></tr></tbody></table></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-grape">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12 clearfix">
+                                    <h4 class="pull-left" style="margin: 0 0 20px;">Annual Sales <small>(by quarter)</small></h4>
+                                    <div class="btn-group pull-right">
+                                        <a href="javascript:;" class="btn btn-default btn-sm active">2012</a>
+                                        <a href="javascript:;" class="btn btn-default btn-sm ">2011</a>
+                                        <a href="javascript:;" class="btn btn-default btn-sm ">2010</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div id="budget-variance" style="height: 250px; padding: 0px; position: relative;"><canvas class="flot-base" width="395" height="250" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 395px; height: 250px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div style="position: absolute; max-width: 191px; top: 238px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 69px; text-align: center;">Q1</div><div style="position: absolute; max-width: 191px; top: 238px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 161px; text-align: center;">Q2</div><div style="position: absolute; max-width: 191px; top: 238px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 253px; text-align: center;">Q3</div><div style="position: absolute; max-width: 191px; top: 238px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 345px; text-align: center;">Q4</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div style="position: absolute; top: 222px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 12px; text-align: right;">$0K</div><div style="position: absolute; top: 167px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 6px; text-align: right;">$25K</div><div style="position: absolute; top: 112px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 6px; text-align: right;">$50K</div><div style="position: absolute; top: 57px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 6px; text-align: right;">$75K</div><div style="position: absolute; top: 2px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 0px; text-align: right;">$100K</div></div></div><canvas class="flot-overlay" width="395" height="250" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 395px; height: 250px;"></canvas><div class="legend"><div style="position: absolute; width: 54px; height: 34px; top: 13px; right: 13px; opacity: 0.85; background-color: rgb(255, 255, 255);"> </div><table style="position:absolute;top:13px;right:13px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid transparent;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(141,150,175);overflow:hidden"></div></div></td><td class="legendLabel">Budget</td></tr><tr><td class="legendColorBox"><div style="border:1px solid transparent;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(85,107,141);overflow:hidden"></div></div></td><td class="legendLabel">Actual</td></tr></tbody></table></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12 clearfix">
+                                    <h4 class="pull-left" style="margin:0 0 10px">Site Reports <small>(overview)</small></h4>
+                                    <div class="pull-right">
+                                        <a href="javascript:;" class="btn btn-default-alt btn-sm"><i class="fa fa-refresh"></i></a>
+                                        <a href="javascript:;" class="btn btn-default-alt btn-sm"><i class="fa fa-wrench"></i></a>
+                                        <a href="javascript:;" class="btn btn-default-alt btn-sm"><i class="fa fa-cog"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-2">
+                                    <div id="indexvisits" style="width: 90px; margin: 0 auto; padding: 10px 0 6px;"><canvas width="90" height="45" style="display: inline-block; width: 90px; height: 45px; vertical-align: top;"></canvas></div>
+                                    <h3 style="text-align: center; margin: 0; color: #808080;">7,451</h3>
+                                    <p style="text-align: center; margin: 0;">Visits</p>
+                                    <hr class="hidden-md hidden-lg">
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-2">
+                                    <div id="indexpageviews" style="width: 90px; margin: 0 auto; padding: 10px 0 6px;"><canvas width="90" height="45" style="display: inline-block; width: 90px; height: 45px; vertical-align: top;"></canvas></div>
+                                    <h3 style="text-align: center; margin: 0; color: #808080;">35,711</h3>
+                                    <p style="text-align: center; margin: 0;">Page Views</p>
+                                    <hr class="hidden-md hidden-lg">
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-2">
+                                    <div id="indexpagesvisit" style="width: 90px; margin: 0 auto; padding: 10px 0 6px;"><canvas width="90" height="45" style="display: inline-block; width: 90px; height: 45px; vertical-align: top;"></canvas></div>
+                                    <h3 style="text-align: center; margin: 0; color: #808080;">6.92</h3>
+                                    <p style="text-align: center; margin: 0;">Pages / Visit</p>
+                                    <hr class="hidden-md hidden-lg">
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-2">
+                                    <div id="indexavgvisit" style="width: 90px; margin: 0 auto; padding: 10px 0 6px;"><canvas width="90" height="45" style="display: inline-block; width: 90px; height: 45px; vertical-align: top;"></canvas></div>
+                                    <h3 style="text-align: center; margin: 0; color: #808080;">00:04:17</h3>
+                                    <p style="text-align: center; margin: 0;">Average Visit Time</p>
+                                    <hr class="hidden-md hidden-lg">
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-2">
+                                    <div id="indexnewvisits" style="width: 90px; margin: 0 auto; padding: 10px 0 6px;"><canvas width="90" height="45" style="display: inline-block; width: 90px; height: 45px; vertical-align: top;"></canvas></div>
+                                    <h3 style="text-align: center; margin: 0; color: #808080;">71.27%</h3>
+                                    <p style="text-align: center; margin: 0;">New Visits</p>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-2">
+                                    <div id="indexbouncerate" style="width: 90px; margin: 0 auto; padding: 10px 0 6px;"><canvas width="90" height="45" style="display: inline-block; width: 90px; height: 45px; vertical-align: top;"></canvas></div>
+                                    <h3 style="text-align: center; margin: 0; color: #808080;">31.08%</h3>
+                                    <p style="text-align: center; margin: 0;">Bounce Rate</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-md-3 col-sm-6 col-lg-3">
+                    <a class="info-tiles tiles-alizarin" href="#">
+                        <div class="tiles-heading">
+                            <div class="pull-left">Comments</div>
+                            <div class="pull-right">+15.6%</div>
+                        </div>
+                        <div class="tiles-body">
+                            <div class="pull-left"><i class="fa fa-comments-o"></i></div>
+                            <div class="pull-right"><div id="indexinfocomments" style="margin-top: 10px; margin-bottom: -10px;"><canvas width="79" height="45" style="display: inline-block; width: 79px; height: 45px; vertical-align: top;"></canvas></div></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-3 col-sm-6 col-lg-3">
+                    <a class="info-tiles tiles-orange" href="#">
+                        <div class="tiles-heading">
+                            <div class="pull-left">Likes</div>
+                            <div class="pull-right">-5.5%</div>
+                        </div>
+                        <div class="tiles-body">
+                            <div class="pull-left"><i class="fa fa-thumbs-o-up"></i></div>
+                            <div class="pull-right"><div id="indexinfolikes" style="margin-top: 10px; margin-bottom: -10px;"><canvas width="79" height="45" style="display: inline-block; width: 79px; height: 45px; vertical-align: top;"></canvas></div></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-3 col-sm-6 col-lg-3">
+                    <a class="info-tiles tiles-success" href="#">
+                        <div class="tiles-heading">
+                            <div class="pull-left">Bugs Fixed</div>
+                            <div class="pull-right">+14.9%</div>
+                        </div>
+                        <div class="tiles-body">
+                            <div class="pull-left"><i class="fa fa-check"></i></div>
+                            <div class="pull-right">37</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-md-3 col-sm-6 col-lg-3">
+                    <a class="info-tiles tiles-toyo" href="#">
+                        <div class="tiles-heading">
+                            <div class="pull-left">Downloads</div>
+                            <div class="pull-right">-9.8%</div>
+                        </div>
+                        <div class="tiles-body">
+                            <div class="pull-left"><i class="fa fa-download"></i></div>
+                            <div class="pull-right">3.67<span class="text-smallcaps">k</span></div>
+                        </div>
+                    </a>
+                </div>
+
+                
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-grape">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12 clearfix">
+                                    <h4 class="pull-left" style="margin:0 0 10px">Visitor Statistics <small>(overview)</small></h4>
+                                    <div class="btn-group pull-right">
+                                        <a href="javascript:;" id="updatePieCharts" class="btn btn-default-alt btn-sm">Refresh</a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-4" style="padding-top:10px;padding-bottom:10px;">
+                                    <div class="easypiechart" id="returningvisits" data-percent="65">
+                                        <span class="percent">65</span>
+                                    <canvas height="90" width="90"></canvas></div>
+                                    <label for="newvisits">Returning Visits</label>
+                                    <hr class="hidden-md hidden-lg">
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-4" style="padding-top:10px;padding-bottom:10px;">
+                                    <span class="easypiechart" id="newvisitor" data-percent="81">
+                                        <span class="percent">81</span>
+                                    <canvas height="90" width="90"></canvas></span>
+                                    <label for="bouncerate">New Visitor</label>
+                                    <hr class="hidden-md hidden-lg">
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-4" style="padding-top:10px;padding-bottom:10px;">
+                                    <span class="easypiechart" id="clickrate" data-percent="42">
+                                        <span class="percent">42</span>
+                                    <canvas height="90" width="90"></canvas></span>
+                                    <label for="clickrate">Click Rate</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-orange">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12 clearfix">
+                                    <h4 class="pull-left" style="margin: 0 0 20px;">Server Load</h4>
+                                    <div class="btn-group pull-right">
+                                        <a href="javascript:;" class="btn btn-default btn-sm active">Server #1</a>
+                                        <a href="javascript:;" class="btn btn-default btn-sm ">Server #2</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div id="server-load" style="height: 125px; padding: 0px; position: relative;"><canvas class="flot-base" width="395" height="125" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 395px; height: 125px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div style="position: absolute; top: 109px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 12px; text-align: right;">0%</div><div style="position: absolute; top: 56px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 6px; text-align: right;">50%</div><div style="position: absolute; top: 2px; font-style: normal; font-variant: normal; font-weight: 400; font-stretch: normal; font-size: 12px; line-height: 12.65px; font-family: 'Source Sans Pro', 'Segoe UI', 'Droid Sans', Tahoma, Arial, sans-serif; color: rgb(140, 140, 140); left: 0px; text-align: right;">100%</div></div></div><canvas class="flot-overlay" width="395" height="125" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 395px; height: 125px;"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+            <div class="row">        
+                <div class="col-md-6">
+                    <div class="panel panel-indigo">
+                        <div class="panel-heading">
+                            <h4>User Accounts</h4>
+                            <div class="options">
+                                <a href="javascript:;"><i class="fa fa-cog"></i></a>
+                                <a href="javascript:;"><i class="fa fa-wrench"></i></a> 
+                                <a href="javascript:;" class="panel-collapse"><i class="fa fa-chevron-down"></i></a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table" style="margin-bottom: 0px;">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-xs-1 col-sm-1"><input type="checkbox" id="select-all"></th>
+                                            <th class="col-xs-9 col-sm-3">User ID</th>
+                                            <th class="col-sm-6 hidden-xs">Email Address</th>
+                                            <th class="col-xs-2 col-sm-2">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="selects">
+                                        <tr>
+                                            <td><input type="checkbox" class=""></td>
+                                            <td>cranston</td>
+                                            <td class="hidden-xs">cranstonb@gnail.com</td>
+                                            <td><span class="label label-success">Approved</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" class=""></td>
+                                            <td>aaron</td>
+                                            <td class="hidden-xs">ppaul@lime.com</td>
+                                            <td><span class="label label-grape">Pending</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" class=""></td>
+                                            <td>norris</td>
+                                            <td class="hidden-xs">j.norris@gnail.com</td>
+                                            <td><span class="label label-warning">Suspended</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" class=""></td>
+                                            <td>gunner</td>
+                                            <td class="hidden-xs">gunner@outluk.com</td>
+                                            <td><span class="label label-danger">Blocked</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" class=""></td>
+                                            <td>mrford</td>
+                                            <td class="hidden-xs">fordm@gnail.com</td>
+                                            <td><span class="label label-grape">Pending</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" class=""></td>
+                                            <td>stewrtt</td>
+                                            <td class="hidden-xs">swttrs@outluk.com</td>
+                                            <td><span class="label label-danger">Blocked</span></td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr class="active">
+                                            <td colspan="4" class="text-left">
+                                                <label for="action" style="margin-bottom:0">Action </label>
+                                                <select name="action">
+                                                    <option value="Edit">Edit</option>
+                                                    <option value="Aprove">Aprove</option>
+                                                    <option value="Move">Move</option>
+                                                    <option value="Delete">Delete</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-grape">
+                        <div class="panel-heading">
+                              <h4><i class="icon-highlight fa fa-check"></i> To-do List</h4>
+                              <!-- <div class="options">
+                                <a href="javascript:;"><i class="fa fa-cog"></i></a>
+                                <a href="javascript:;"><i class="fa fa-wrench"></i></a> 
+                                <a href="javascript:;" class="panel-collapse"><i class="fa fa-chevron-down"></i></a>
+                              </div> -->
+                        </div>
+                        <div class="panel-body">
+                            <ul class="panel-tasks ui-sortable">
+                                <li class="item-danger">
+                                    <label>
+                                        <i class="fa fa-ellipsis-v icon-dragtask"></i>
+                                        <input type="checkbox"> 
+                                        <span class="task-description">Write documentation for theme</span>
+                                        <span class="label label-info">6 Days</span>
+                                    </label>
+                                    <div class="options todooptions">
+                                        <div class="btn-group">
+                                            <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                                            <button class="btn btn-default btn-xs"><i class="fa fa-cog"></i></button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-primary">
+                                    <label>
+                                        <i class="fa fa-ellipsis-v icon-dragtask"></i>
+                                        <input type="checkbox"> 
+                                        <span class="task-description">Compile code</span>
+                                        <span class="label label-primary">3 Days</span>
+                                    </label>
+                                    <div class="options todooptions">
+                                        <div class="btn-group">
+                                            <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                                            <button class="btn btn-default btn-xs"><i class="fa fa-cog"></i></button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-info">
+                                    <label>
+                                        <i class="fa fa-ellipsis-v icon-dragtask"></i>
+                                        <input type="checkbox"> 
+                                        <span class="task-description">Upload files to server</span>
+                                        <span class="label label-orange">Tomorrow</span>
+                                    </label>
+                                    <div class="options todooptions">
+                                        <div class="btn-group">
+                                            <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                                            <button class="btn btn-default btn-xs"><i class="fa fa-cog"></i></button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-success">
+                                    <label>
+                                        <i class="fa fa-ellipsis-v icon-dragtask"></i>
+                                        <input type="checkbox"> 
+                                        <span class="task-description">Call client</span>
+                                        <span class="label label-danger">Today</span>
+                                    </label>
+                                    <div class="options todooptions">
+                                        <div class="btn-group">
+                                            <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                                            <button class="btn btn-default btn-xs"><i class="fa fa-cog"></i></button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label>
+                                        <i class="fa fa-ellipsis-v icon-dragtask"></i>
+                                        <input type="checkbox"> 
+                                        <span class="task-description">Buy some milk</span>
+                                        <span class="label label-danger">Today</span>
+                                    </label>
+                                    <div class="options todooptions">
+                                        <div class="btn-group">
+                                            <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                                            <button class="btn btn-default btn-xs"><i class="fa fa-cog"></i></button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label>
+                                        <i class="fa fa-ellipsis-v icon-dragtask"></i>
+                                        <input type="checkbox"> 
+                                        <span class="task-description">Setup meeting with client</span>
+                                        <span class="label label-sky">2 Weeks</span>
+                                    </label>
+                                    <div class="options todooptions">
+                                        <div class="btn-group">
+                                            <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                                            <button class="btn btn-default btn-xs"><i class="fa fa-cog"></i></button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <label>
+                                        <i class="fa fa-ellipsis-v icon-dragtask"></i>
+                                        <input type="checkbox"> 
+                                        <span class="task-description">Pay office rent and bills</span>
+                                        <span class="label label-sky">3 Weeks</span>
+                                    </label>
+                                    <div class="options todooptions">
+                                        <div class="btn-group">
+                                            <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                                            <button class="btn btn-default btn-xs"><i class="fa fa-cog"></i></button>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                            <a href="#" class="btn btn-success btn-sm pull-left">Add Tasks</a>
+                            <a href="#" class="btn btn-default-alt btn-sm pull-right">See All Tasks</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-inverse">
+                        <div class="panel-heading">
+                              <h4><i class="icon-highlight fa fa-calendar"></i> Calendar</h4>
+                              <div class="options">
+                                <a href="javascript:;"><i class="fa fa-cog"></i></a>
+                                <a href="javascript:;"><i class="fa fa-wrench"></i></a> 
+                                <a href="javascript:;" class="panel-collapse"><i class="fa fa-chevron-down"></i></a>
+                              </div>
+                        </div>
+                        <div class="panel-body" id="calendardemo">
+                              <div id="calendar-drag" class="fc fc-ltr"><table class="fc-header" style="width:100%"><tbody><tr><td class="fc-header-left"><span class="fc-header-title"><h2>March 2016</h2></span></td><td class="fc-header-center"></td><td class="fc-header-right"><span class="fc-button fc-button-prev fc-state-default fc-corner-left" unselectable="on"><i class="fa fa-angle-left"></i></span><span class="fc-button fc-button-next fc-state-default fc-corner-right" unselectable="on"><i class="fa fa-angle-right"></i></span></td></tr></tbody></table><div class="fc-content" style="position: relative;"><div class="fc-view fc-view-month fc-grid" style="position:relative" unselectable="on"><div class="fc-event-container" style="position:absolute;z-index:8;top:0;left:0"><div class="fc-event fc-event-hori fc-event-draggable fc-event-start fc-event-end" style="position: absolute; left: 115px; width: 51px; top: 122px; background-color: rgb(239, 161, 49);"><div class="fc-event-inner"><span class="fc-event-title">All Day Event</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></div><div class="fc-event fc-event-hori fc-event-draggable fc-event-start" style="position: absolute; left: 227px; width: 166px; top: 45px; background-color: rgb(122, 134, 156);"><div class="fc-event-inner"><span class="fc-event-title">Long Event</span></div></div><div class="fc-event fc-event-hori fc-event-draggable fc-event-end" style="position: absolute; left: 1px; width: 53px; top: 122px; background-color: rgb(122, 134, 156);"><div class="fc-event-inner"><span class="fc-event-title">Long Event</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></div><div class="fc-event fc-event-hori fc-event-draggable fc-event-start fc-event-end" style="position: absolute; left: 339px; width: 52px; top: 63px; background-color: rgb(231, 76, 60);"><div class="fc-event-inner"><span class="fc-event-time">4p</span><span class="fc-event-title">Repeating Event</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></div><div class="fc-event fc-event-hori fc-event-draggable fc-event-start fc-event-end" style="position: absolute; left: 339px; width: 52px; top: 122px; background-color: rgb(231, 76, 60);"><div class="fc-event-inner"><span class="fc-event-time">4p</span><span class="fc-event-title">Repeating Event</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></div><div class="fc-event fc-event-hori fc-event-draggable fc-event-start fc-event-end" style="position: absolute; left: 115px; width: 51px; top: 157px; background-color: rgb(118, 196, 237);"><div class="fc-event-inner"><span class="fc-event-time">10:30a</span><span class="fc-event-title">Meeting</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></div><div class="fc-event fc-event-hori fc-event-draggable fc-event-start fc-event-end" style="position: absolute; left: 115px; width: 51px; top: 175px; background-color: rgb(52, 73, 94);"><div class="fc-event-inner"><span class="fc-event-time">12p</span><span class="fc-event-title">Lunch</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></div><div class="fc-event fc-event-hori fc-event-draggable fc-event-start fc-event-end" style="position: absolute; left: 171px; width: 51px; top: 122px; background-color: rgb(43, 188, 224);"><div class="fc-event-inner"><span class="fc-event-time">7p</span><span class="fc-event-title">Birthday Party</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></div><a href="http://google.com/" class="fc-event fc-event-hori fc-event-draggable fc-event-start fc-event-end" style="position: absolute; left: 59px; width: 107px; top: 305px; background-color: rgb(241, 196, 15);"><div class="fc-event-inner"><span class="fc-event-title">Click for Google</span></div><div class="ui-resizable-handle ui-resizable-e">&nbsp;&nbsp;&nbsp;</div></a></div><table class="fc-border-separate" style="width:100%" cellspacing="0"><thead><tr class="fc-first fc-last"><th class="fc-day-header fc-sun fc-widget-header fc-first" style="width: 56px;">Sun</th><th class="fc-day-header fc-mon fc-widget-header" style="width: 56px;">Mon</th><th class="fc-day-header fc-tue fc-widget-header" style="width: 56px;">Tue</th><th class="fc-day-header fc-wed fc-widget-header" style="width: 56px;">Wed</th><th class="fc-day-header fc-thu fc-widget-header" style="width: 56px;">Thu</th><th class="fc-day-header fc-fri fc-widget-header" style="width: 56px;">Fri</th><th class="fc-day-header fc-sat fc-widget-header fc-last">Sat</th></tr></thead><tbody><tr class="fc-week fc-first"><td class="fc-day fc-sun fc-widget-content fc-other-month fc-past fc-first" data-date="2016-02-28"><div style="min-height: 43px;"><div class="fc-day-number">28</div><div class="fc-day-content"><div style="position: relative; height: 53px;">&nbsp;</div></div></div></td><td class="fc-day fc-mon fc-widget-content fc-other-month fc-past" data-date="2016-02-29"><div><div class="fc-day-number">29</div><div class="fc-day-content"><div style="position: relative; height: 53px;">&nbsp;</div></div></div></td><td class="fc-day fc-tue fc-widget-content fc-past" data-date="2016-03-01"><div><div class="fc-day-number">1</div><div class="fc-day-content"><div style="position: relative; height: 53px;">&nbsp;</div></div></div></td><td class="fc-day fc-wed fc-widget-content fc-past" data-date="2016-03-02"><div><div class="fc-day-number">2</div><div class="fc-day-content"><div style="position: relative; height: 53px;">&nbsp;</div></div></div></td><td class="fc-day fc-thu fc-widget-content fc-past" data-date="2016-03-03"><div><div class="fc-day-number">3</div><div class="fc-day-content"><div style="position: relative; height: 53px;">&nbsp;</div></div></div></td><td class="fc-day fc-fri fc-widget-content fc-past" data-date="2016-03-04"><div><div class="fc-day-number">4</div><div class="fc-day-content"><div style="position: relative; height: 53px;">&nbsp;</div></div></div></td><td class="fc-day fc-sat fc-widget-content fc-past fc-last" data-date="2016-03-05"><div><div class="fc-day-number">5</div><div class="fc-day-content"><div style="position: relative; height: 53px;">&nbsp;</div></div></div></td></tr><tr class="fc-week"><td class="fc-day fc-sun fc-widget-content fc-past fc-first" data-date="2016-03-06"><div style="min-height: 43px;"><div class="fc-day-number">6</div><div class="fc-day-content"><div style="position: relative; height: 71px;">&nbsp;</div></div></div></td><td class="fc-day fc-mon fc-widget-content fc-past" data-date="2016-03-07"><div><div class="fc-day-number">7</div><div class="fc-day-content"><div style="position: relative; height: 71px;">&nbsp;</div></div></div></td><td class="fc-day fc-tue fc-widget-content fc-today fc-state-highlight" data-date="2016-03-08"><div><div class="fc-day-number">8</div><div class="fc-day-content"><div style="position: relative; height: 71px;">&nbsp;</div></div></div></td><td class="fc-day fc-wed fc-widget-content fc-future" data-date="2016-03-09"><div><div class="fc-day-number">9</div><div class="fc-day-content"><div style="position: relative; height: 71px;">&nbsp;</div></div></div></td><td class="fc-day fc-thu fc-widget-content fc-future" data-date="2016-03-10"><div><div class="fc-day-number">10</div><div class="fc-day-content"><div style="position: relative; height: 71px;">&nbsp;</div></div></div></td><td class="fc-day fc-fri fc-widget-content fc-future" data-date="2016-03-11"><div><div class="fc-day-number">11</div><div class="fc-day-content"><div style="position: relative; height: 71px;">&nbsp;</div></div></div></td><td class="fc-day fc-sat fc-widget-content fc-future fc-last" data-date="2016-03-12"><div><div class="fc-day-number">12</div><div class="fc-day-content"><div style="position: relative; height: 71px;">&nbsp;</div></div></div></td></tr><tr class="fc-week"><td class="fc-day fc-sun fc-widget-content fc-future fc-first" data-date="2016-03-13"><div style="min-height: 43px;"><div class="fc-day-number">13</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-mon fc-widget-content fc-future" data-date="2016-03-14"><div><div class="fc-day-number">14</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-tue fc-widget-content fc-future" data-date="2016-03-15"><div><div class="fc-day-number">15</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-wed fc-widget-content fc-future" data-date="2016-03-16"><div><div class="fc-day-number">16</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-thu fc-widget-content fc-future" data-date="2016-03-17"><div><div class="fc-day-number">17</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-fri fc-widget-content fc-future" data-date="2016-03-18"><div><div class="fc-day-number">18</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-sat fc-widget-content fc-future fc-last" data-date="2016-03-19"><div><div class="fc-day-number">19</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td></tr><tr class="fc-week"><td class="fc-day fc-sun fc-widget-content fc-future fc-first" data-date="2016-03-20"><div style="min-height: 43px;"><div class="fc-day-number">20</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-mon fc-widget-content fc-future" data-date="2016-03-21"><div><div class="fc-day-number">21</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-tue fc-widget-content fc-future" data-date="2016-03-22"><div><div class="fc-day-number">22</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-wed fc-widget-content fc-future" data-date="2016-03-23"><div><div class="fc-day-number">23</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-thu fc-widget-content fc-future" data-date="2016-03-24"><div><div class="fc-day-number">24</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-fri fc-widget-content fc-future" data-date="2016-03-25"><div><div class="fc-day-number">25</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-sat fc-widget-content fc-future fc-last" data-date="2016-03-26"><div><div class="fc-day-number">26</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td></tr><tr class="fc-week"><td class="fc-day fc-sun fc-widget-content fc-future fc-first" data-date="2016-03-27"><div style="min-height: 43px;"><div class="fc-day-number">27</div><div class="fc-day-content"><div style="position: relative; height: 18px;">&nbsp;</div></div></div></td><td class="fc-day fc-mon fc-widget-content fc-future" data-date="2016-03-28"><div><div class="fc-day-number">28</div><div class="fc-day-content"><div style="position: relative; height: 18px;">&nbsp;</div></div></div></td><td class="fc-day fc-tue fc-widget-content fc-future" data-date="2016-03-29"><div><div class="fc-day-number">29</div><div class="fc-day-content"><div style="position: relative; height: 18px;">&nbsp;</div></div></div></td><td class="fc-day fc-wed fc-widget-content fc-future" data-date="2016-03-30"><div><div class="fc-day-number">30</div><div class="fc-day-content"><div style="position: relative; height: 18px;">&nbsp;</div></div></div></td><td class="fc-day fc-thu fc-widget-content fc-future" data-date="2016-03-31"><div><div class="fc-day-number">31</div><div class="fc-day-content"><div style="position: relative; height: 18px;">&nbsp;</div></div></div></td><td class="fc-day fc-fri fc-widget-content fc-other-month fc-future" data-date="2016-04-01"><div><div class="fc-day-number">1</div><div class="fc-day-content"><div style="position: relative; height: 18px;">&nbsp;</div></div></div></td><td class="fc-day fc-sat fc-widget-content fc-other-month fc-future fc-last" data-date="2016-04-02"><div><div class="fc-day-number">2</div><div class="fc-day-content"><div style="position: relative; height: 18px;">&nbsp;</div></div></div></td></tr><tr class="fc-week fc-last"><td class="fc-day fc-sun fc-widget-content fc-other-month fc-future fc-first" data-date="2016-04-03"><div style="min-height: 44px;"><div class="fc-day-number">3</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-mon fc-widget-content fc-other-month fc-future" data-date="2016-04-04"><div><div class="fc-day-number">4</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-tue fc-widget-content fc-other-month fc-future" data-date="2016-04-05"><div><div class="fc-day-number">5</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-wed fc-widget-content fc-other-month fc-future" data-date="2016-04-06"><div><div class="fc-day-number">6</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-thu fc-widget-content fc-other-month fc-future" data-date="2016-04-07"><div><div class="fc-day-number">7</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-fri fc-widget-content fc-other-month fc-future" data-date="2016-04-08"><div><div class="fc-day-number">8</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td><td class="fc-day fc-sat fc-widget-content fc-other-month fc-future fc-last" data-date="2016-04-09"><div><div class="fc-day-number">9</div><div class="fc-day-content"><div style="position: relative; height: 0px;">&nbsp;</div></div></div></td></tr></tbody></table></div></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel panel-midnightblue">
+                        <div class="panel-heading">
+                              <h4>
+                                <ul class="nav nav-tabs">
+                                  <li class="active"><a href="#threads" data-toggle="tab"><i class="fa fa-list visible-xs icon-scale"></i><span class="hidden-xs">Threads</span></a></li>
+                                  <li><a href="#comments" data-toggle="tab"><i class="fa fa-comments visible-xs icon-scale"></i><span class="hidden-xs">Comments</span></a></li>
+                                  <li><a href="#users" data-toggle="tab"><i class="fa fa-group visible-xs icon-scale"></i><span class="hidden-xs">Users</span></a></li>
+                                </ul>
+                              </h4>
+                              <!-- <div class="options">
+                                <a href="javascript:;"><i class="fa fa-cog"></i></a>
+                                <a href="javascript:;"><i class="fa fa-wrench"></i></a> 
+                              </div> -->
+                        </div>
+                        <div class="panel-body">
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="threads" tabindex="5000" style="overflow-y: hidden; outline: none;">
+                                    <ul class="panel-threads">
+                                        <li>
+                                            <img src="assets/demo/avatar/aniss.png" alt="Aniss">
+                                            <div class="content">
+                                                <span class="time">20 mins</span>
+                                                <a href="#" class="title">Envato’s Most Wanted – $5,000 Reward for Music &amp; Band Themes and Templates</a>
+                                                <span class="thread">asked by <a href="#">Jim Gordon</a> in <a href="#">Section #3</a></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/corbett.png" alt="Corbett">
+                                            <div class="content">
+                                                <span class="time">2 hrs</span>
+                                                <a href="#" class="title">How to create a corporate wordpress theme?</a>
+                                                <span class="thread">asked by <a href="#">Simon Corbett</a> in <a href="#">Section #15</a></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/dangerfield.png" alt="Dangerfield">
+                                            <div class="content">
+                                                <span class="time">4 hrs</span>
+                                                <a href="#" class="title">Which cart is growing in popularity - WOOCOMMERCE or OPENCART? And which one would you choose?</a>
+                                                <span class="thread">asked by <a href="#">Jeff Dangerfield</a> in <a href="#">Section #9</a></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/doyle.png" alt="Doyle">
+                                            <div class="content">
+                                                <span class="time">13 hrs</span>
+                                                <a href="#" class="title">Pros and Cons of Using Grids in Responsive Web Design</a>
+                                                <span class="thread">asked by <a href="#">Alan Doyle</a> in <a href="#">Section #11</a></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/jackson.png" alt="Jackson">
+                                            <div class="content">
+                                                <span class="time">19 hrs</span>
+                                                <a href="#" class="title">Best Web &amp; Graphic Design Proposal Software</a>
+                                                <span class="thread">asked by <a href="#">Eric Jackson</a> in <a href="#">Section #18</a></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/aniss.png" alt="Aniss">
+                                            <div class="content">
+                                                <span class="time">20 mins</span>
+                                                <a href="#" class="title">Envato’s Most Wanted – $5,000 Reward for Music &amp; Band Themes and Templates</a>
+                                                <span class="thread">asked by <a href="#">Jim Gordon</a> in <a href="#">Section #3</a></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/corbett.png" alt="Corbett">
+                                            <div class="content">
+                                                <span class="time">2 hrs</span>
+                                                <a href="#" class="title">How to create a corporate wordpress theme?</a>
+                                                <span class="thread">asked by <a href="#">Simon Corbett</a> in <a href="#">Section #15</a></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/dangerfield.png" alt="Dangerfield">
+                                            <div class="content">
+                                                <span class="time">4 hrs</span>
+                                                <a href="#" class="title">Which cart is growing in popularity - WOOCOMMERCE or OPENCART? And which one would you choose?</a>
+                                                <span class="thread">asked by <a href="#">Jeff Dangerfield</a> in <a href="#">Section #9</a></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/doyle.png" alt="Doyle">
+                                            <div class="content">
+                                                <span class="time">13 hrs</span>
+                                                <a href="#" class="title">Pros and Cons of Using Grids in Responsive Web Design</a>
+                                                <span class="thread">asked by <a href="#">Alan Doyle</a> in <a href="#">Section #11</a></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/jackson.png" alt="Jackson">
+                                            <div class="content">
+                                                <span class="time">19 hrs</span>
+                                                <a href="#" class="title">Best Web &amp; Graphic Design Proposal Software</a>
+                                                <span class="thread">asked by <a href="#">Eric Jackson</a> in <a href="#">Section #18</a></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="btn btn-default-alt btn-sm pull-right">Load More</a>
+                                </div>
+                                <div class="tab-pane" id="comments" tabindex="5001" style="overflow-y: hidden; outline: none;">
+                                    <ul class="panel-comments">
+                                        <li>
+                                            <img src="assets/demo/avatar/aniss.png" alt="Aniss">
+                                            <div class="content">
+                                                <span class="actions"><div class="options"><div class="btn-group"><button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button><button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button></div></div></span>
+                                                <span class="commented"><a href="#">Jim Gordon</a> commented on <a href="#">Article #121</a></span>
+                                                Just wondering - can random users see our comments? If so, allow them to comment!
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/corbett.png" alt="Corbett">
+                                            <div class="content">
+                                                <span class="actions"><div class="options"><div class="btn-group"><button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button><button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button></div></div></span>
+                                                <span class="commented"><a href="#">Simon Corbett</a> commented on <a href="#">Article #55</a></span>
+                                                Not sure what changed but for the last few weeks a few of my regulars are having their comments held for moderation.
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/paton.png" alt="Corbett">
+                                            <div class="content">
+                                                <span class="actions"><div class="options"><div class="btn-group"><button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button><button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button></div></div></span>
+                                                <span class="commented"><a href="#">Polly Paton</a> commented on <a href="#">Article #12</a></span>
+                                                I’m sure there is a tool for that. 
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/watson.png" alt="Watson">
+                                            <div class="content">
+                                                <span class="actions"><div class="options"><div class="btn-group"><button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button><button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button></div></div></span>
+                                                <span class="commented"><a href="#">Annie Watson</a> commented on <a href="#">Article #223</a></span>
+                                                We have enough problems with Spammers already without letting non members leave comments.
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/aniss.png" alt="Aniss">
+                                            <div class="content">
+                                                <span class="actions"><div class="options"><div class="btn-group"><button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button><button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button></div></div></span>
+                                                <span class="commented"><a href="#">Jim Gordon</a> commented on <a href="#">Article #121</a></span>
+                                                Just wondering - can random users see our comments? If so, allow them to comment!
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/corbett.png" alt="Corbett">
+                                            <div class="content">
+                                                <span class="actions"><div class="options"><div class="btn-group"><button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button><button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button></div></div></span>
+                                                <span class="commented"><a href="#">Simon Corbett</a> commented on <a href="#">Article #55</a></span>
+                                                Not sure what changed but for the last few weeks a few of my regulars are having their comments held for moderation.
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/paton.png" alt="Corbett">
+                                            <div class="content">
+                                                <span class="actions"><div class="options"><div class="btn-group"><button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button><button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button></div></div></span>
+                                                <span class="commented"><a href="#">Polly Paton</a> commented on <a href="#">Article #12</a></span>
+                                                I’m sure there is a tool for that. 
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/watson.png" alt="Watson">
+                                            <div class="content">
+                                                <span class="actions"><div class="options"><div class="btn-group"><button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button><button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button></div></div></span>
+                                                <span class="commented"><a href="#">Annie Watson</a> commented on <a href="#">Article #223</a></span>
+                                                We have enough problems with Spammers already without letting non members leave comments.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="btn btn-default-alt btn-sm pull-right">Load More</a>
+                                </div>
+                                <div class="tab-pane" id="users" tabindex="5002" style="overflow-y: hidden; outline: none;">
+                                    <ul class="panel-users">
+                                        <li>
+                                            <img src="assets/demo/avatar/paton.png" alt="Paton">
+                                            <div class="content">
+                                                <span class="time">11 mins</span>
+                                                <span class="desc"><a href="#">Polly Paton</a> followed <a href="#">John White</a></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/tennant.png" alt="Tennant">
+                                            <div class="content">
+                                                <span class="time">48 mins</span>
+                                                <span class="desc"><a href="#">David Tennant</a> unfollowed <a href="#">Tony Doubleday</a></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/jobs.png" alt="Jobs">
+                                            <div class="content">
+                                                <span class="time">5 hrs</span>
+                                                <span class="desc"><a href="#">Howard Jobs</a> commented on <a href="#">Selling PSD Template Rights!</a></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/dangerfield.png" alt="Dangerfield">
+                                            <div class="content">
+                                                <span class="time">6 hrs</span>
+                                                <span class="desc"><a href="#">Jeff Dangerfield</a> posted on <a href="#">Please help with Theme Design</a></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/aniss.png" alt="Aniss">
+                                            <div class="content">
+                                                <span class="time">22 hrs</span>
+                                                <span class="desc"><a href="#">Jim Gordon</a> followed <a href="#">Polly Paton</a></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/corbett.png" alt="Corbett">
+                                            <div class="content">
+                                                <span class="time">3 days</span>
+                                                <span class="desc"><a href="#">Simon Corbett</a> followed <a href="#">Anna Johansson</a></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/paton.png" alt="Paton">
+                                            <div class="content">
+                                                <span class="time">11 mins</span>
+                                                <span class="desc"><a href="#">Polly Paton</a> followed <a href="#">John White</a></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/tennant.png" alt="Tennant">
+                                            <div class="content">
+                                                <span class="time">48 mins</span>
+                                                <span class="desc"><a href="#">David Tennant</a> unfollowed <a href="#">Tony Doubleday</a></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/jobs.png" alt="Jobs">
+                                            <div class="content">
+                                                <span class="time">5 hrs</span>
+                                                <span class="desc"><a href="#">Howard Jobs</a> commented on <a href="#">Selling PSD Template Rights!</a></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/dangerfield.png" alt="Dangerfield">
+                                            <div class="content">
+                                                <span class="time">6 hrs</span>
+                                                <span class="desc"><a href="#">Jeff Dangerfield</a> posted on <a href="#">Please help with Theme Design</a></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/aniss.png" alt="Aniss">
+                                            <div class="content">
+                                                <span class="time">22 hrs</span>
+                                                <span class="desc"><a href="#">Jim Gordon</a> followed <a href="#">Polly Paton</a></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="assets/demo/avatar/corbett.png" alt="Corbett">
+                                            <div class="content">
+                                                <span class="time">3 days</span>
+                                                <span class="desc"><a href="#">Simon Corbett</a> followed <a href="#">Anna Johansson</a></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="btn btn-default-alt btn-sm pull-right">Load More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- container -->
+    </div> <!--wrap -->
+</div>

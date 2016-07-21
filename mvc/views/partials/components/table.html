@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+<body>
+Table View!
+{{title}}
+<table>
+{{#each .}}
+<tr>
+{{#if @first}}
+	{{#each this}}
+		<th>{{@key}}</td>
+	{{/each}}
+{{/if}}
+
+{{#each this}}
+	<td>{{@key}}:{{this}}</td>
+{{/each}}
+</tr>
+{{/each}}
+</table>
+</body>
+</html>

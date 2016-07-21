@@ -1,0 +1,19 @@
+{{!-- parameters for this partial view are
+	title : The title of the card 
+	color : the color of the card
+	icon  : the icon displayed on the card
+	badge : the sub caption in the top right hand corner
+	
+	Usage: 
+	{{card tile_title="Monkey" color="green" icon="pencil"}}
+	--}} 
+
+<a href="#" class="shortcut-tiles tiles-{{color}}">
+                        <div class="tiles-body">
+                            <div class="pull-left"><i class="fa fa-{{icon}}"></i></div>
+                            {{#if badge}}<div class="pull-right"><span class="badge">{{badge}}</span></div>{{/if}}
+                        </div>
+                        <div class="tiles-footer">
+                            {{title}}
+                        </div>
+                    </a>

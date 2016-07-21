@@ -1,0 +1,45 @@
+<div class="panel panel-{{scheme.primary}}">
+            <div class="panel-heading">
+                <h4>{{panelTitle}}</h4>
+          </div>
+          <div class="panel-body">
+            <div class=table-responsive">
+                <table class=""table stripe table-bordered datatables " id="data-table">
+                	{{#each records}}
+                	{{#if @first}}
+					 <thead>
+                        <tr>
+                   
+					{{#each this}}
+						<th>{{@key}}</td>
+					{{/each}}
+					 </tr>
+                    </thead>
+                    
+                    <tbody>
+                    {{/if}}
+					
+					
+                  	{{#each this}}
+                  		{{#if @first}}
+                  			<tr item-id="{{this}}">
+                  			<td><i class="fa fa-{{../../scheme.icon}}"></i></td>
+						{{else}}
+						<td>{{this}}</td>
+						{{/if}}
+				   {{/each}}
+				   </tr> 
+				  
+				  {{/each}}
+				</tbody>
+                </table>
+            </div>
+          </div>
+<script type="text/javascript">
+$(function(){
+	$('#data-table').DataTable();	
+});
+
+</script>
+<script type='text/javascript' src='/plugins/datatables/jquery.dataTables.min.js'></script> 
+<script type='text/javascript' src='/plugins/datatables/dataTables.bootstrap.js'></script> 

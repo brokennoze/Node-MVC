@@ -1,0 +1,72 @@
+        <nav id="page-leftbar" role="navigation">
+                <!-- BEGIN SIDEBAR MENU -->
+            <ul class="acc-menu" id="sidebar">
+                <li id="search">
+                    <a href="javascript:;"><i class="fa fa-search opacity-control"></i></a>
+                     <form>
+                        <input type="text" class="search-query" placeholder="Search...">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </li>
+                <li class="divider"></li>
+                {{loadView "nav-menu-item" title="Dashboard" icon="home" target="Main/Dashboard"}}
+
+                <li class="divider">PBX</li>
+                {{loadView "nav-menu-item" title="Endpoints" icon=settings.Scheme.Endpoint.icon badge="10" target="Main/Endpoints"}}
+                {{loadView "nav-menu-item" title="Dialplans" icon=settings.Scheme.Dialplan.icon badge="1" target="Main/Dialplans"}}
+                {{loadView "nav-menu-item" title="IVR" icon=settings.Scheme.IVR.icon badge="" target="Main/IVR"}}
+                {{loadView "nav-menu-item" title="Prompts" icon=settings.Scheme.Prompt.icon badge="" target="Main/Prompts"}}
+                <li class="divider"></li>                
+                {{loadView "nav-menu-item" title="Queues" icon=settings.Scheme.Queue.icon badge="" target="Main/Queues"}}
+                {{loadView "nav-menu-item" title="Roles" icon=settings.Scheme.Role.icon badge="" target="Main/Roles"}}
+                 {{loadView "nav-menu-item" title='Agents' icon=settings.Scheme.Agent.icon  target="Main/Agents"}}
+				<li class="divider"></li>                
+                
+                {{loadView "nav-menu-item" title='Call Recorder' icon=settings.Scheme.Call_Recorder.icon  target="Main/Recorder"}}
+                {{loadView "nav-menu-item" title="Video" icon=settings.Scheme.Video.icon badge=""  target="Main/Video"}}
+                <li class="divider"></li>                
+                
+                {{loadView "nav-menu-item" title="Network" icon=settings.Scheme.Network.icon badge=""  target="Main/Network"}}
+                {{loadView "nav-menu-item" title="Users" icon=settings.Scheme.User.icon badge=""  target="Main/Users"}}
+                {{loadView "nav-menu-item" title="General" icon=settings.Scheme.General.icon badge=""  target="Main/General"}}
+                
+                
+              <!-- 
+              
+              Example of using a treeview. need to implment this somehow in the nav-menu-item via subitems
+              
+               <li><a href="javascript:;"><i class="fa fa-briefcase"></i> <span>Extras</span> <span class="badge badge-danger">1</span></a>
+                    <ul class="acc-menu">
+                        <li><a href="extras-signupform.htm">Sign Up</a></li>
+                        <li><a href="extras-404.htm">404 Page</a></li>
+                        <li><a href="extras-500.htm">500 Page</a></li>
+                        <li><a href="extras-login.htm">Login 1</a></li>
+                        <li><a href="extras-login2.htm">Login 2</a></li>
+                        <li><a href="extras-forgotpassword.htm">Password Reset</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="javascript:;"><i class="fa fa-sitemap"></i> <span>Unlimited Level Menu</span></a>
+                    <ul class="acc-menu">
+                        <li><a href="javascript:;">Menu Item 1</a></li>
+                        <li><a href="javascript:;">Menu Item 2</a>
+                            <ul class="acc-menu">
+                                <li><a href="javascript:;">Menu Item 2.1</a></li>
+                                <li><a href="javascript:;">Menu Item 2.2</a>
+                                    <ul class="acc-menu">
+                                        <li><a href="javascript:;">Menu Item 2.2.1</a></li>
+                                        <li><a href="javascript:;">Menu Item 2.2.2</a>
+                                            <ul class="acc-menu">
+                                                <li><a href="javascript:;">And deeper yet!</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                -->
+            </ul>
+           
+        </nav>

@@ -1,0 +1,20 @@
+<div class="widget">
+                    <form  class="slideout-editor">
+                    <div class="widget-heading">
+                        <a href="javascript:;"  data-target="#accsummary"><h4>{{panelTitle}}</h4></a>
+                    </div>
+                    <div class="widget-body collapse in" id="accsummary">
+                    	{{#each records}}
+                    	<table>
+                    	{{#each this}}
+                    	<tr>
+                    		<td><label>{{@key}}</label></td>
+                    		<td><input name="{{@key}}" type="text" value="{{this}}"></input></td>
+                    	<tr>
+                    	{{/each}}
+                    	{{/each}}
+                    	</table>
+                    	<button class="btn-submit btn btn-{{color}}">Save</button>
+                    </div>
+                    </form>
+                </div>

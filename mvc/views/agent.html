@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="/css/bootstrap.css" rel="stylesheet"/>
+ <link href="/css/application.css" rel="stylesheet"/>
+</head>
+<body>
+  I am an agent and my name is {{person.[0].firstName.[0]}} {{person.[0].lastName.[0]}} And my Attributes are...
+<ul>
+  {{#each agentAttributes.[0].agentAttribute}}
+
+  <li>{{this.attribute.[0].refURL.[0]}}
+  {{this.attribute.[0].name.[0]}}
+  {{this.attribute.[0].dataType.[0]}}
+  {{this.attribute.[0].attributeValue.[0]}}</li>
+  {{/each}}
+</ul>
+</body>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+
+</html>
